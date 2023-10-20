@@ -26,9 +26,12 @@ dependencies:
   '@refinedev/core':
     specifier: ^4.44.5
     version: 4.44.5(@tanstack/react-query@4.36.1)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+  '@refinedev/devtools':
+    specifier: ^1.1.14
+    version: 1.1.14(@refinedev/cli@2.16.6)(@refinedev/core@4.44.5)(@refinedev/devtools-server@1.1.11)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
   '@refinedev/nextjs-router':
-    specifier: ^5.5.2
-    version: 5.5.2(@refinedev/core@4.44.5)(@types/react-dom@18.2.13)(@types/react@18.2.28)(next@13.5.5)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.5.4
+    version: 5.5.4(@refinedev/core@4.44.5)(@types/react-dom@18.2.13)(@types/react@18.2.28)(next@13.5.5)(react-dom@18.2.0)(react@18.2.0)
   '@refinedev/simple-rest':
     specifier: ^4.5.4
     version: 4.5.4(@refinedev/core@4.44.5)
@@ -107,6 +110,14 @@ packages:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /@aliemir/dom-to-fiber-utils@0.4.0:
+    resolution: {integrity: sha512-QxJLBDQG4tMTv56yvAHeUdRVoocTYGUqyVHqUsATT7TMCgFj1JRcbzzUbdiwwIJ1d5loDUK5PesyKG2RY7t0iQ==}
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-reconciler: 0.29.0(react@18.2.0)
+    dev: false
 
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -2157,8 +2168,36 @@ packages:
       - react-native
     dev: false
 
-  /@refinedev/nextjs-router@5.5.2(@refinedev/core@4.44.5)(@types/react-dom@18.2.13)(@types/react@18.2.28)(next@13.5.5)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Xr8hh4MErtT01vioCnK1WE4ztaabpiBTlu6a1rhIeqX7T9NDDC75BhITzccCsLS5Pg4z++vcTSELPjHU6iuSIQ==}
+  /@refinedev/devtools@1.1.14(@refinedev/cli@2.16.6)(@refinedev/core@4.44.5)(@refinedev/devtools-server@1.1.11)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-EcGazYG2EOhA7vPaD0kQgvCmDE3PZrUINcCfFOEYN/ODm7EIpIuaR+PVmo6386lvWeblkbFgusAs5ovJ2/lM0w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@refinedev/cli': 2.16.6
+      '@refinedev/core': ^4.42.0
+      '@refinedev/devtools-server': 1.1.11
+      '@types/react': ^17.0.0 || ^18.0.0
+      '@types/react-dom': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+    dependencies:
+      '@aliemir/dom-to-fiber-utils': 0.4.0
+      '@refinedev/cli': 2.16.6(@babel/preset-env@7.23.2)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      '@refinedev/core': 4.44.5(@tanstack/react-query@4.36.1)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      '@refinedev/devtools-server': 1.1.11(@babel/preset-env@7.23.2)(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      '@refinedev/devtools-shared': 1.1.2(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.28
+      '@types/react-dom': 18.2.13
+      error-stack-parser: 2.1.4
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - react-native
+    dev: false
+
+  /@refinedev/nextjs-router@5.5.4(@refinedev/core@4.44.5)(@types/react-dom@18.2.13)(@types/react@18.2.28)(next@13.5.5)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-eOQxDqKSKsLOmZgUBZTlJzp78SnoF6Xa3cAI5kLObmeflt750yMr3WW3gNF/fRSKB39beOAEoTyIq01zBK8JrA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@refinedev/core': ^4.0.0
@@ -3095,7 +3134,7 @@ packages:
       json-schema-typed: 7.0.3
       onetime: 5.1.2
       pkg-up: 3.1.0
-      semver: 7.3.8
+      semver: 7.5.4
     dev: false
 
   /content-disposition@0.5.4:
@@ -6021,6 +6060,17 @@ packages:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: false
 
+  /react-reconciler@0.29.0(react@18.2.0):
+    resolution: {integrity: sha512-wa0fGj7Zht1EYMRhKWwoo1H9GApxYLBuhoAuXN0TlltESAjDssB+Apf0T/DngVqaMyPypDmabL37vw/2aRM98Q==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.0
+    dev: false
+
   /react-router-dom@6.17.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qWHkkbXQX+6li0COUUPKAUkxjNNqPJuiBd27dVwQGDNsuFBdMbrS6UZ0CLYc4CsbdLYTckn4oB4tGDuPZpPhaQ==}
     engines: {node: '>=14.0.0'}
@@ -6353,7 +6403,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /send@0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
