@@ -11,8 +11,7 @@ import {Input} from "@/components/ui/input"
 import {Label} from "@/components/ui/label"
 import {toast} from "@/components/ui/use-toast"
 import {Icons} from "@/components/icons"
-import {useState} from "react";
-import {useTimeoutEffect, useToggle} from "@react-hookz/web";
+// import {useToggle} from "@react-hookz/web";
 import {useLogin} from "@refinedev/core";
 import {userAuthSchema} from "@/lib/validations/auth";
 import { useSearchParams } from 'next/navigation'
@@ -43,9 +42,7 @@ export function UserAuthForm({className, ...props}: UserAuthFormProps) {
                     if (authData.success) {
                         toast({
                             title: "登录成功",
-                            description: "2秒后跳转",
                         })
-                        toggleEnabled()
                     } else {
                         toast({
                             title: authData.error.message,
@@ -62,18 +59,6 @@ export function UserAuthForm({className, ...props}: UserAuthFormProps) {
                 },
             });
     }
-
-    // https://react-hookz.github.io/web/?path=/docs/lifecycle-usetimeouteffect--example
-    const [enabled, toggleEnabled] = useToggle();
-    const [replaceUrl, setReplaceUrl] = useState("/");
-    const [timeoutValue, setTimeoutValue] = useState<number>(2000);
-
-    const [cancel, reset] = useTimeoutEffect(
-        () => {
-            window.location.replace(replaceUrl);
-        },
-        enabled ? timeoutValue : undefined
-    );
 
     return (
         <div className={cn("grid gap-6", className)} {...props}>
