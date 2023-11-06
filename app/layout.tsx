@@ -37,6 +37,7 @@ export default function RootLayout({
             ]}
             options={{
               syncWithLocation: true,
+              projectId: "HqKHWC-SWK8vi-QxiGJ7"
             }}
             notificationProvider={notificationProvider}
           >

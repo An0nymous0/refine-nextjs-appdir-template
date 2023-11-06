@@ -17,21 +17,21 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "@react-hookz/web": "^23.1.0",
-    "@refinedev/cli": "^2.16.6",
-    "@refinedev/core": "^4.44.5",
-    "@refinedev/devtools": "^1.1.14",
+    "@refinedev/cli": "^2.16.15",
+    "@refinedev/core": "^4.44.12",
+    "@refinedev/devtools": "^1.1.23",
     "@refinedev/nextjs-router": "^5.5.4",
     "@refinedev/simple-rest": "^4.5.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "cross-env": "^7.0.3",
-    "lucide-react": "^0.288.0",
-    "next": "14.0.0",
-    "next-auth": "^4.23.2",
+    "lucide-react": "^0.292.0",
+    "next": "14.0.1",
+    "next-auth": "^4.24.4",
     "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.47.0",
+    "react-hook-form": "^7.48.2",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
@@ -42,9 +42,12 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
     "eslint": "^8",
-    "eslint-config-next": "14.0.0",
+    "eslint-config-next": "14.0.1",
     "postcss": "^8",
     "tailwindcss": "^3",
     "typescript": "^5"
+  },
+  "refine": {
+    "projectId": "HqKHWC-SWK8vi-QxiGJ7"
   }
 }
